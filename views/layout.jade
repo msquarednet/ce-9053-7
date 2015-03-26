@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css", rel="stylesheet") 
+    body
+        ul.nav.nav-tabs
+            li(class={active: tab=="home"})
+                a(href="/") Home
+            li(class={active: tab == "things"})
+                a(href="/things") Things
+            li(class={active: tab == "people"})
+                a(href="/people") People
+                
+        .container
+            block content
