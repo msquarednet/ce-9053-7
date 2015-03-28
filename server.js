@@ -18,6 +18,15 @@ var people = [
     { id: 3, name: "Curly"}
 ];
 
+var tabs = {};
+
+app.use(function(req,res, next) {
+    res.locals.tabs = tabs;
+    next();
+});
+
+
+
 app.get("/", function(req, res){
    res.render("index", {tab: "home"});
 });
